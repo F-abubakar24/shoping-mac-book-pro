@@ -32,3 +32,8 @@ button:hover{
     background-color: #DC3545;
     border: 1px solid #DC3545;
 }
+
+/* selected border style */
+.selectedOne{
+    border: 2px solid #DC3545;
+}

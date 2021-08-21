@@ -14,6 +14,15 @@ function allButtonHandler(checker, price){
 
 }
 
+// for button selected one is focused;
+function focusedButton(add, remove1, remove2){
+    add.classList.add('selectedOne');
+    remove1.classList.remove('selectedOne');
+    remove2.classList.remove('selectedOne');
+}
+
+
+
 // update total price
 function totalPriceUpdate(){
     const memory = parseFloat(memoryCost.innerText);

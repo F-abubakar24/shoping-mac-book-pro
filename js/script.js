@@ -22,36 +22,46 @@ const total = document.getElementById('total');
 // ========= memory part =========
 memory8GB.addEventListener('click', function(){
     allButtonHandler('memory', '0');
-    totalPriceUpdate()
+    totalPriceUpdate();
+    focusedButton(memory8GB, memory16GB); // focused buttn style
 })
 memory16GB.addEventListener('click', function(){
     allButtonHandler('memory', '180');
-    totalPriceUpdate()
+    totalPriceUpdate();
+    focusedButton(memory16GB, memory8GB); // focused buttn style
 })
 
 // ========= memory part =========
 storage226GB.addEventListener('click', function(){
     allButtonHandler('storage', '0');
-    totalPriceUpdate()
+    totalPriceUpdate();
+    focusedButton(storage226GB, storage512GB, storage1TB); // focused buttn style
 })
 storage512GB.addEventListener('click', function(){
     allButtonHandler('storage', '100');
-    totalPriceUpdate()
+    totalPriceUpdate();
+    focusedButton(storage512GB, storage226GB, storage1TB); // focused buttn style
 })
 storage1TB.addEventListener('click', function(){
     allButtonHandler('storage', '180');
-    totalPriceUpdate()
+    totalPriceUpdate();
+    focusedButton(storage1TB, storage226GB, storage512GB); // focused buttn style
 })
 
 // ========= delivery part =========
 freeDelivery.addEventListener('click', function(){
     allButtonHandler('delivery', '0');
-    totalPriceUpdate()
+    totalPriceUpdate();
+    focusedButton(freeDelivery, paidDelivery); // focused buttn style
 })
 paidDelivery.addEventListener('click', function(){
     allButtonHandler('delivery', '20');
-    totalPriceUpdate()
+    totalPriceUpdate();
+    focusedButton(paidDelivery, freeDelivery); // focused buttn style
 })
+
+
+
 
 // ========= promo code part =========
 const promocodeInput = document.getElementById('promocode-input');
@@ -73,7 +83,8 @@ applyBtn.addEventListener('click', function(){
             const discount = (Number(totalPrice.innerText) *20)/100;
             total.innerText = Number(totalPrice.innerText)-discount;
             promocodeInput.value = '';
-       }
 
+       }
     }
+
 })
