@@ -25,10 +25,9 @@ function totalPriceUpdate(){
     total.innerText = finalTotal;
 }
 
-// discount -- function;
-function discount(p){
-    const percentage = p / 100;
-    const discount = percentage * 20;
-    const discountPrice = p - discount;
-    return discountPrice;
-}
+// // discount -- function;
+// function discount(p){
+//     const percentage = (p * 20) / 100;
+//     const discountPrice = p - percentage;
+//     return discountPrice;
+// }

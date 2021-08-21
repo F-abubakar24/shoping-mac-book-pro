@@ -56,12 +56,23 @@ const promocodeInput = document.getElementById('promocode-input');
 const applyBtn = document.getElementById('apply-btn');
 
 applyBtn.addEventListener('click', function(){
-    const inputItem = promocodeInput.value;
-    const totalAmount = parseFloat(total.innerText);
+    // const inputItem = promocodeInput.value;
+    // const totalAmount = parseFloat(total.innerText);
 
-    if(inputItem === 'stevekaku'){
-        total.innerText = discount(totalAmount);
-        promocodeInput.value = '';
+    // if(inputItem === 'stevekaku'){
+    //     total.innerText = discount(totalAmount);
+    //     promocodeInput.value = '';
+    // }
+
+    if (isNaN(promocodeInput.value)) {
+    
+        if (promocodeInput.value == 'stevekaku') {
+    
+            const discount = (Number(totalPrice.innerText) *20)/100;
+            total.innerText = Number(totalPrice.innerText)-discount;
+            promocodeInput.value = '';
+       }
+
     }
-
+    
 })
