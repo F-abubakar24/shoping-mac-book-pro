@@ -1,19 +1,20 @@
-// memory function;
-function memory(price){
-    memoryCost.innerText = price;
+// common function all button handler
+function allButtonHandler(checker, price){
+
+    if(checker === 'memory'){
+        memoryCost.innerText = price; // memory
+        
+    } else if(checker === 'storage'){
+        storageCost.innerText = price; // storage
+        
+    } else if(checker === 'delivery'){
+        deliveryCharge.innerText = price; // delivery
+
+    }
+
 }
 
-// storage function;
-function storage(price){
-    storageCost.innerText = price;
-}
-
-// delivery function;
-function delivery(price){
-    deliveryCharge.innerText = price;
-}
-
-// update price
+// update total price
 function totalPriceUpdate(){
     const memory = parseFloat(memoryCost.innerText);
     const storage = parseFloat(storageCost.innerText);
